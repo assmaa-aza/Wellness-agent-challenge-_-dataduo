@@ -1,65 +1,153 @@
-# 🧠 Khotwa – Micro-Progress AI Agent (Atomic Tasks)
+# خطوة — Khotwa
 
-An AI-powered autonomous agent that helps users overcome procrastination by breaking complex tasks into ultra-small, actionable steps.
+> Un pas. Une action. Maintenant.
 
----
-
-## 🚀 Project Description
-
-Khotwa is an intelligent AI agent designed to:
-- Understand user messages
-- Detect blocking situations (stress, confusion, overload)
-- Generate micro-actions that are impossible to refuse
-- Adapt dynamically based on user feedback ("done" / "too hard")
-
-Instead of giving long advice, the agent focuses on **one tiny actionable step at a time**.
+Agent IA anti-procrastination qui décompose n'importe quelle tâche en **une seule micro-action impossible à refuser**.
 
 ---
 
-## 💡 Key Features
+## 🚀 Installation rapide
 
-- 🧠 AI-based task analysis (Gemini API)
-- ⚡ Micro-task generation (Atomic Tasks)
-- 🔁 Adaptive difficulty system
-- 💬 Feedback loop ("Done" / "Too hard")
-- 🧩 Modular agent architecture
-- 🌐 Simple web interface (HTML + JS)
+### 1. Cloner et préparer l'environnement
 
----
+```bash
+git clone <repo-url>
+cd Khotwa
 
-## 🏗️ Project Structure
-project/
-│
-├── backend/
-│ ├── agent.py
-│ ├── gemini_service.py
-│
-├── frontend/
-│ ├── index.html
-│ ├── script.js
-│ ├── style.css
-│
-├── requirements.txt
-├── README.md
-## ⚙️ Installation
+python -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
 
-### 1️⃣ Install Python
-Make sure you have Python 3.9+
+### 2. Configurer la clé API
 
-Check:  python --version 
-### 2️⃣ Install dependencies
-pip install google-generativeai python-dotenv
-### 3️⃣ Add your API key
-Create a .env file:
-GEMINI_API_KEY=YOUR_API_KEY_HERE
---> Get your API key here:
-https://aistudio.google.com/
+Crée un fichier `.env` à la racine du projet :
 
+```env
+OPENAI_API_KEY=sk-...
+```
 
-▶️ How to Run the Project
-1️⃣ Start the backend
+Ou exporte-la directement :
+
+```bash
+export OPENAI_API_KEY=sk-...
+```
+
+### 3. Lancer le backend
+
+```bash
 cd backend
-python agent.py
-2️⃣ Open the frontend
-You have 2 options:
-Open frontend/index.html
+python app.py
+```
+
+Le serveur démarre sur `http://localhost:5000`.
+
+### 4. Ouvrir le frontend
+
+Ouvre simplement `frontend/index.html` dans ton navigateur.  
+Pour éviter les problèmes CORS avec Chrome, tu peux utiliser :
+
+```bash
+cd frontend
+python -m http.server 8080
+# puis ouvre http://localhost:8080
+```
+
+---
+
+## 📁 Structure du projet
+
+```
+Khotwa/
+├── backend/
+│   ├── app.py                  # Point d'entrée Flask
+│   ├── agent/
+│   │   ├── controller.py       # Boucle principale de l'agent
+│   │   ├── reasoning.py        # Analyse via OpenAI
+│   │   ├── decision.py         # Ajustement de la difficulté
+│   │   └── memory.py           # Persistance de l'état utilisateur
+│   ├── services/
+│   │   ├── openai_service.py   # Wrapper OpenAI API
+│   │   └── task_generator.py   # Générateur de tâches de secours
+│   ├── models/
+│   │   ├── user_state.py       # Dataclass état utilisateur
+│   │   └── task.py             # Dataclass micro-tâche
+│   └── utils/
+│       └── helpers.py          # Utilitaires (scaling, encouragements)
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── data/
+│   └── user_data.json          # Stockage JSON des états utilisateurs
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 🔌 API endpoints
+
+### `POST /chat`
+Envoie un message et obtient une micro-tâche.
+
+```json
+// Request
+{
+  "user_id": "alice",
+  "message": "je dois faire un rapport mais je bloque",
+  "feedback": null
+}
+
+// Response
+{
+  "task": "Ouvre ton document",
+  "difficulty": 2,
+  "category": "writing",
+  "encouragement": null,
+  "blocage_type": "surcharge",
+  "streak": 0
+}
+```
+
+### `POST /chat` (avec feedback)
+```json
+{
+  "user_id": "alice",
+  "message": "je dois faire un rapport",
+  "feedback": "fait"
+}
+```
+
+### `POST /reset`
+Réinitialise l'état d'un utilisateur.
+```json
+{ "user_id": "alice" }
+```
+
+---
+
+## 🧠 Comment ça marche
+
+```
+Message utilisateur
+        │
+        ▼
+  controller.py ──► memory.py (charger l'état)
+        │
+        ├──► reasoning.py ──► OpenAI API (analyser le blocage)
+        │
+        ├──► decision.py (ajuster la difficulté selon le feedback)
+        │
+        └──► memory.py (sauvegarder) ──► Réponse JSON
+```
+
+---
+
+## 🔮 Pistes d'évolution
+
+- Intégration Google Calendar (rappels intelligents)
+- Notifications push (web/mobile)
+- Gamification (niveaux, badges)
+- Analyse comportementale long terme
+- Version mobile React Native
