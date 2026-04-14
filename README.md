@@ -24,14 +24,9 @@ pip install -r requirements.txt
 Crée un fichier `.env` à la racine du projet :
 
 ```env
-OPENAI_API_KEY=sk-...
+GEMINI_API_KEY=AIza...
 ```
 
-Ou exporte-la directement :
-
-```bash
-export OPENAI_API_KEY=sk-...
-```
 
 ### 3. Lancer le backend
 
@@ -63,11 +58,11 @@ Khotwa/
 │   ├── app.py                  # Point d'entrée Flask
 │   ├── agent/
 │   │   ├── controller.py       # Boucle principale de l'agent
-│   │   ├── reasoning.py        # Analyse via OpenAI
+│   │   ├── reasoning.py        # Analyse via Google Gemini API
 │   │   ├── decision.py         # Ajustement de la difficulté
 │   │   └── memory.py           # Persistance de l'état utilisateur
 │   ├── services/
-│   │   ├── openai_service.py   # Wrapper OpenAI API
+│   │   ├── openai_service.py   # Wrapper Google Gemini API
 │   │   └── task_generator.py   # Générateur de tâches de secours
 │   ├── models/
 │   │   ├── user_state.py       # Dataclass état utilisateur
@@ -135,7 +130,7 @@ Message utilisateur
         ▼
   controller.py ──► memory.py (charger l'état)
         │
-        ├──► reasoning.py ──► OpenAI API (analyser le blocage)
+        ├──► reasoning.py ──► Google Gemini API (analyser le blocage)
         │
         ├──► decision.py (ajuster la difficulté selon le feedback)
         │
