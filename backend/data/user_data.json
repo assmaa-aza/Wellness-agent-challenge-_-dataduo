@@ -1,0 +1,267 @@
+{
+  "user_g90n9u": {
+    "user_id": "user_g90n9u",
+    "current_task": "Termine cette tâche.",
+    "current_difficulty": 4,
+    "blocage_type": "other",
+    "history": [
+      {
+        "role": "user",
+        "content": "je veux creer un chatbot"
+      },
+      {
+        "role": "assistant",
+        "content": "Termine cette tâche."
+      },
+      {
+        "role": "user",
+        "content": "je veux creer un chatbot"
+      },
+      {
+        "role": "assistant",
+        "content": "Termine cette tâche."
+      },
+      {
+        "role": "user",
+        "content": "je veux creer un chatbot"
+      },
+      {
+        "role": "assistant",
+        "content": "Continue jusqu'à mi-chemin."
+      },
+      {
+        "role": "user",
+        "content": "je veux creer un chatbot"
+      },
+      {
+        "role": "assistant",
+        "content": "Termine cette tâche."
+      },
+      {
+        "role": "user",
+        "content": "je veux creer un chatbot"
+      },
+      {
+        "role": "assistant",
+        "content": "Termine cette tâche."
+      },
+      {
+        "role": "user",
+        "content": "je veux creer un chatbot"
+      },
+      {
+        "role": "assistant",
+        "content": "Termine cette tâche."
+      },
+      {
+        "role": "user",
+        "content": "je veux creer un chatbot"
+      },
+      {
+        "role": "assistant",
+        "content": "Termine cette tâche."
+      },
+      {
+        "role": "user",
+        "content": "je veux creer un chatbot"
+      },
+      {
+        "role": "assistant",
+        "content": "Termine cette tâche."
+      },
+      {
+        "role": "user",
+        "content": "je veux creer un chatbot"
+      },
+      {
+        "role": "assistant",
+        "content": "Termine cette tâche."
+      },
+      {
+        "role": "user",
+        "content": "je veux creer un chatbot"
+      },
+      {
+        "role": "assistant",
+        "content": "Termine cette tâche."
+      }
+    ],
+    "task_history": [
+      {
+        "task": "Fais la première petite étape.",
+        "feedback": "trop_dur"
+      },
+      {
+        "task": "Fais la première petite étape.",
+        "feedback": "trop_dur"
+      },
+      {
+        "task": "Prépare ton espace de travail.",
+        "feedback": "fait"
+      },
+      {
+        "task": "Commence par juste t'asseoir et respirer.",
+        "feedback": "fait"
+      },
+      {
+        "task": "Prépare ton espace de travail.",
+        "feedback": "fait"
+      },
+      {
+        "task": "Fais la première petite étape.",
+        "feedback": "fait"
+      },
+      {
+        "task": "Continue jusqu'à mi-chemin.",
+        "feedback": "fait"
+      },
+      {
+        "task": "Termine cette tâche.",
+        "feedback": "trop_dur"
+      },
+      {
+        "task": "Termine cette tâche.",
+        "feedback": "fait"
+      },
+      {
+        "task": "Continue jusqu'à mi-chemin.",
+        "feedback": "fait"
+      },
+      {
+        "task": "Termine cette tâche.",
+        "feedback": "fait"
+      },
+      {
+        "task": "Termine cette tâche.",
+        "feedback": "trop_dur"
+      },
+      {
+        "task": "Termine cette tâche.",
+        "feedback": "fait"
+      },
+      {
+        "task": "Continue jusqu'à mi-chemin.",
+        "feedback": "fait"
+      },
+      {
+        "task": "Termine cette tâche.",
+        "feedback": "fait"
+      },
+      {
+        "task": "Termine cette tâche.",
+        "feedback": "fait"
+      },
+      {
+        "task": "Termine cette tâche.",
+        "feedback": "fait"
+      },
+      {
+        "task": "Termine cette tâche.",
+        "feedback": "fait"
+      },
+      {
+        "task": "Termine cette tâche.",
+        "feedback": "trop_dur"
+      }
+    ],
+    "streak": 0
+  },
+  "user_kek6ry": {
+    "user_id": "user_kek6ry",
+    "current_task": "Fais la première petite étape.",
+    "current_difficulty": 4,
+    "blocage_type": "other",
+    "history": [
+      {
+        "role": "user",
+        "content": "je dois faire un rapport"
+      },
+      {
+        "role": "assistant",
+        "content": "Fais la première petite étape."
+      },
+      {
+        "role": "user",
+        "content": "je dois faire un rapport"
+      },
+      {
+        "role": "assistant",
+        "content": "Fais la première petite étape."
+      }
+    ],
+    "task_history": [
+      {
+        "task": "Fais la première petite étape.",
+        "feedback": "fait"
+      }
+    ],
+    "streak": 1
+  },
+  "user_9zr10x": {
+    "user_id": "user_9zr10x",
+    "current_task": "Termine cette tâche.",
+    "current_difficulty": 5,
+    "blocage_type": "other",
+    "history": [
+      {
+        "role": "user",
+        "content": "je dois faire un rapport et je suis bloqué"
+      },
+      {
+        "role": "assistant",
+        "content": "Fais la première petite étape."
+      },
+      {
+        "role": "user",
+        "content": "je dois faire un rapport et je suis bloqué"
+      },
+      {
+        "role": "assistant",
+        "content": "Fais la première petite étape."
+      },
+      {
+        "role": "user",
+        "content": "je dois faire un rapport et je suis bloqué"
+      },
+      {
+        "role": "assistant",
+        "content": "Continue jusqu'à mi-chemin."
+      },
+      {
+        "role": "user",
+        "content": "je dois faire un rapport et je suis bloqué"
+      },
+      {
+        "role": "assistant",
+        "content": "Termine cette tâche."
+      },
+      {
+        "role": "user",
+        "content": "je dois faire un rapport et je suis bloqué"
+      },
+      {
+        "role": "assistant",
+        "content": "Termine cette tâche."
+      }
+    ],
+    "task_history": [
+      {
+        "task": "Fais la première petite étape.",
+        "feedback": "fait"
+      },
+      {
+        "task": "Fais la première petite étape.",
+        "feedback": "fait"
+      },
+      {
+        "task": "Continue jusqu'à mi-chemin.",
+        "feedback": "fait"
+      },
+      {
+        "task": "Termine cette tâche.",
+        "feedback": "fait"
+      }
+    ],
+    "streak": 4
+  }
+}
